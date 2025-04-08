@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的投资</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <!-- 顶部导航 -->
+    <div class="flex items-center mb-6">
+        <button onclick="history.back()" class="mr-4">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-xl font-bold">我的投资</h1>
+    </div>
+
+    <!-- 投资记录列表 -->
+    <div class="space-y-4">
+        <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-3">
+                <div class="font-medium">电子信息产业项目</div>
+                <div class="text-sm text-blue-600">审核中</div>
+            </div>
+            <div class="text-sm text-gray-500 space-y-2">
+                <div>投资规模：5000万元</div>
+                <div>预计年产值：15000万元</div>
+                <div>提交时间：2024-01-20</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-3">
+                <div class="font-medium">生物医药产业项目</div>
+                <div class="text-sm text-green-600">已通过</div>
+            </div>
+            <div class="text-sm text-gray-500 space-y-2">
+                <div>投资规模：8000万元</div>
+                <div>预计年产值：24000万元</div>
+                <div>提交时间：2023-12-15</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

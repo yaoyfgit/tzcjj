@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政策解读</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="p-4">
+    <!-- 顶部导航 -->
+    <div class="flex items-center mb-6">
+        <button onclick="history.back()" class="mr-4">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-xl font-bold">政策解读</h1>
+    </div>
+
+    <!-- 新闻列表 -->
+    <div class="space-y-4">
+        <div class="news-card">
+            <div class="aspect-[2/1] bg-gray-100">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="政策新闻图片" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold mb-2">南宁市发布新一轮科技创新扶持政策</h3>
+                <p class="text-gray-600 text-sm mb-3">南宁市政府近日出台《关于促进科技创新的若干政策措施》，从研发投入、人才引进、平台建设等多个方面加大扶持力度...</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>发布时间：2024-01-15</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="p-4">
+                <h3 class="text-lg font-bold mb-2">解读：南宁市产业转型升级扶持政策要点</h3>
+                <p class="text-gray-600 text-sm mb-3">针对传统制造业转型升级，南宁市推出系列扶持政策，包括设备更新补贴、技术改造资金支持、智能化改造奖励等多项措施...</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>发布时间：2024-01-10</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="aspect-[2/1] bg-gray-100">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="政策新闻图片" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold mb-2">南宁出台跨境电商发展新政</h3>
+                <p class="text-gray-600 text-sm mb-3">为加快建设中国-东盟跨境电子商务中心，南宁市发布跨境电商发展扶持政策，在物流、通关、金融等方面提供全方位支持...</p>
+                <div class="flex justify-between items-center text-sm text-gray-500">
+                    <span>发布时间：2024-01-05</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

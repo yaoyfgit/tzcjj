@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两微一端</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .media-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="p-4">
+    <!-- 顶部导航 -->
+    <div class="flex items-center mb-6">
+        <button onclick="history.back()" class="mr-4">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-xl font-bold">两微一端</h1>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="space-y-4">
+        <div class="media-card p-4">
+            <h2 class="text-lg font-bold mb-4">关注我们</h2>
+            <p class="text-gray-600 mb-4">欢迎关注南宁投资促进局官方公众号，获取最新投资政策、项目信息和服务动态。</p>
+            <div class="flex justify-center">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=example" alt="官方公众号二维码" class="w-48 h-48">
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-2">扫描二维码关注公众号</p>
+        </div>
+
+        <div class="media-card p-4">
+            <h2 class="text-lg font-bold mb-4">联系方式</h2>
+            <div class="space-y-3">
+                <div class="flex items-center">
+                    <i class="fab fa-weixin text-green-500 text-xl w-8"></i>
+                    <span>微信公众号：南宁投资促进</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fab fa-weibo text-red-500 text-xl w-8"></i>
+                    <span>官方微博：@南宁投资促进</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-mobile-alt text-blue-500 text-xl w-8"></i>
+                    <span>移动客户端：南宁投资APP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

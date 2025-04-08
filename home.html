@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+        .search-bar {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 0.15rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-input {
+            flex: 1;
+            padding: 8px;
+        }
+        .profile-link {
+            padding: 8px;
+            color: #1d4ed8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .menu-item {
+            width: 25%;
+            text-align: center;
+        }
+        .menu-icon {
+            width: 50px;
+            height: 50px;
+            background: #f0f7ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            color: #1d4ed8;
+        }
+        .investment-item {
+            width: 25%;
+            text-align: center;
+        }
+        .float-button {
+            position: fixed;
+            right: 20px;
+            bottom: 100px;
+            background: #1d4ed8;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(29, 78, 216, 0.15);
+            font-size: 14px;
+        }
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="pb-20">
+    <!-- 搜索栏 -->
+    <div class="p-4 flex items-center gap-4">
+        <div class="search-bar flex items-center p-1 flex-1">
+            <i class="fas fa-search text-gray-400 mr-2"></i>
+            <input type="text" placeholder="搜索框" class="bg-transparent outline-none py-0.5">
+        </div>
+        <a href="profile.html" class="profile-link">
+            <i class="fas fa-user"></i>
+        </a>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="px-4 mb-6">
+        <div class="bg-gray-200 rounded-xl aspect-[2/1] overflow-hidden relative">
+            <div class="flex transition-transform duration-500" id="carousel">
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="城市风光" class="w-full h-full object-cover flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800" alt="活动海报" class="w-full h-full object-cover flex-shrink-0">
+            </div>
+            <!-- 轮播指示器 -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity" onclick="showSlide(0)"></button>
+                <button class="w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity" onclick="showSlide(1)"></button>
+            </div>
+            <!-- 切换按钮 -->
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 w-8 h-8 rounded-full flex items-center justify-center" onclick="prevSlide()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/75 w-8 h-8 rounded-full flex items-center justify-center" onclick="nextSlide()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#carousel img');
+    const totalSlides = slides.length;
+    const carousel = document.getElementById('carousel');
+    const indicators = document.querySelectorAll('.bottom-4 button');
+
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        // 更新指示器状态
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.add('opacity-100');
+                indicator.classList.remove('opacity-50');
+            } else {
+                indicator.classList.add('opacity-50');
+                indicator.classList.remove('opacity-100');
+            }
+        });
+    }
+
+    function showSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    // 自动轮播
+    setInterval(nextSlide, 5000);
+    </script>
+
+    <!-- 功能菜单 -->
+    <div class="flex justify-between px-4 mb-4">
+        <div class="menu-item">
+            <a href="policy.html" class="w-full">
+                <div class="menu-icon"><i class="fas fa-book-open"></i></div>
+                <div class="text-sm">政策解读</div>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="advantage.html" class="w-full">
+                <div class="menu-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="text-sm">投资优势</div>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="cooperation.html" class="w-full">
+                <div class="menu-icon"><i class="fas fa-handshake"></i></div>
+                <div class="text-sm">区域合作</div>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="industry.html" class="w-full">
+                <div class="menu-icon"><i class="fas fa-industry"></i></div>
+                <div class="text-sm">产业配套</div>
+            </a>
+        </div>
+    </div>
+        <div class="px-4 mb-4">
+        <h2 class="text-base font-bold mb-2">南宁风采</h2>
+        <div class="bg-gray-50 rounded-xl p-3 space-y-2">
+            <a href="city-intro.html" class="block hover:bg-gray-100 p-2 rounded">
+                <div class="text-xs mb-0.5 text-blue-700">南宁简介</div>
+                <div class="text-xs text-gray-500 line-clamp-1">南宁市是广西壮族自治区首府，中国面向东盟开放合作的前沿城市...</div>
+            </a>
+            <a href="city-culture.html" class="block hover:bg-gray-100 p-2 rounded">
+                <div class="text-xs mb-0.5 text-blue-700">文化特色</div>
+                <div class="text-xs text-gray-500 line-clamp-1">独特的民族文化与现代都市文明交相辉映，形成了独具特色的城市文化...</div>
+            </a>
+            <a href="city-development.html" class="block hover:bg-gray-100 p-2 rounded">
+                <div class="text-xs mb-0.5 text-blue-700">发展动态</div>
+                <div class="text-xs text-gray-500 line-clamp-1">2023年南宁市GDP突破5000亿元，社会发展稳中向好...</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 投资服务 -->
+    <div class="px-4 mb-4">
+        <div class="flex justify-between items-center mb-2">
+            <h2 class="text-base font-bold">投资服务</h2>
+        </div>
+        <!-- 投资服务菜单 -->
+        <div class="flex mb-4 border-b">
+            <div class="px-4 py-2 text-blue-700 border-b-2 border-blue-700 cursor-pointer" onclick="showTab('exhibition')">展会</div>
+            <div class="px-4 py-2 text-gray-500 cursor-pointer" onclick="showTab('park')">园区</div>
+            <div class="px-4 py-2 text-gray-500 cursor-pointer" onclick="showTab('district')">区县</div>
+            <div class="px-4 py-2 text-gray-500 cursor-pointer" onclick="showTab('project')">项目</div>
+        </div>
+        <!-- 展会内容 -->
+        <div id="exhibition" class="tab-content active">
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm mb-4">
+                <a href="exhibition.html">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" alt="展会" class="w-full aspect-[2/1] object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">共商合作大计 同赴金秋之约 第21届东博会高官会在邕举办</h3>
+                        <p class="text-gray-600 text-sm">6月26日，第21届中国—东盟博览会高官会在南宁举办。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 园区内容 -->
+        <div id="park" class="tab-content hidden">
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm mb-4">
+                <a href="park.html">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="园区" class="w-full aspect-[2/1] object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">南宁高新技术产业开发区</h3>
+                        <p class="text-gray-600 text-sm">国家级高新区，重点发展电子信息、生物医药等产业</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 区县内容 -->
+        <div id="district" class="tab-content hidden">
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm mb-4">
+                <a href="district.html">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="区县" class="w-full aspect-[2/1] object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">青秀区</h3>
+                        <p class="text-gray-600 text-sm">南宁市政治、金融、商贸中心，营商环境优越</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 项目内容 -->
+        <div id="project" class="tab-content hidden">
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm mb-4">
+                <a href="project.html">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="项目" class="w-full aspect-[2/1] object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">南宁·中关村电子信息产业园三期项目</h3>
+                        <p class="text-gray-600 text-sm">项目位于科技园内，该项目项目占地约80.5亩，总投资约3.35亿元</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showTab(tabId) {
+        // 隐藏所有内容
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('active');
+            tab.style.display = 'none';
+        });
+        // 显示选中的内容
+        const selectedTab = document.getElementById(tabId);
+        selectedTab.classList.add('active');
+        selectedTab.style.display = 'block';
+        // 更新菜单样式
+        const menuItems = document.querySelectorAll('.flex.mb-4.border-b > div');
+        menuItems.forEach(item => {
+            if (item.innerText.toLowerCase().includes(['展会', '园区', '区县', '项目'][['exhibition', 'park', 'district', 'project'].indexOf(tabId)].toLowerCase())) {
+                item.classList.add('text-blue-700', 'border-b-2', 'border-blue-700');
+                item.classList.remove('text-gray-500');
+            } else {
+                item.classList.remove('text-blue-700', 'border-b-2', 'border-blue-700');
+                item.classList.add('text-gray-500');
+            }
+        });
+    }
+    </script>
+
+    <!-- 浮动按钮 -->
+    <a href="invest.html" class="float-button">
+        <i class="fas fa-edit mr-2"></i>我要投资
+    </a>
+</body>
+</html>

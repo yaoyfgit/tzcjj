@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投资投诉</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .complaint-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="p-4">
+    <!-- 顶部导航 -->
+    <div class="flex items-center mb-6">
+        <button onclick="history.back()" class="mr-4">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-xl font-bold">投资投诉</h1>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="space-y-4">
+        <div class="complaint-card p-4">
+            <h2 class="text-lg font-bold mb-4">投诉渠道</h2>
+            <div class="space-y-3">
+                <div class="flex items-center">
+                    <i class="fas fa-phone text-blue-500 text-xl w-8"></i>
+                    <span>投诉热线：0771-12345</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-blue-500 text-xl w-8"></i>
+                    <span>投诉邮箱：complaint@nanning.gov.cn</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-blue-500 text-xl w-8"></i>
+                    <span>投诉地址：南宁市青秀区民族大道159号</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="complaint-card p-4">
+            <h2 class="text-lg font-bold mb-4">工作时间</h2>
+            <div class="space-y-3">
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-blue-500 text-xl w-8"></i>
+                    <span>周一至周五：上午9:00-12:00，下午14:00-17:00</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-info-circle text-blue-500 text-xl w-8"></i>
+                    <span>节假日休息（特殊情况除外）</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="complaint-card p-4">
+            <h2 class="text-lg font-bold mb-4">温馨提示</h2>
+            <p class="text-gray-600">为了更好地解决您的问题，请在投诉时提供详细的信息，包括：</p>
+            <ul class="list-disc list-inside text-gray-600 mt-2 space-y-1">
+                <li>具体的投诉事项和时间</li>
+                <li>相关证据材料</li>
+                <li>您的联系方式</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

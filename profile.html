@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .profile-header {
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            height: 160px;
+            position: relative;
+            border-radius: 0 0 24px 24px;
+        }
+        .profile-info {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+        }
+        .menu-icon {
+            width: 32px;
+            height: 32px;
+            background: #f0f7ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: #1d4ed8;
+        }
+        .menu-icon i {
+            font-size: 16px;
+        }
+        .menu-content {
+            flex: 1;
+        }
+        .menu-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1f2937;
+            line-height: 1.2;
+        }
+        .menu-arrow {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回按钮 -->
+    <div class="fixed top-4 left-4 z-10">
+        <a href="home.html" class="text-white">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </a>
+    </div>
+
+    <!-- 个人信息头部 -->
+    <div class="profile-header">
+        <div class="profile-info">
+            <div class="text-xl font-bold mb-2">张三</div>
+            <div class="text-sm opacity-80">企业投资者</div>
+        </div>
+    </div>
+
+    <!-- 功能菜单 -->
+    <div class="mt-4">
+        <a href="investment.html" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="menu-content">
+                <div class="menu-title">我的投资</div>
+            </div>
+            <div class="menu-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="survey.html" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="menu-content">
+                <div class="menu-title">调查征集</div>
+            </div>
+            <div class="menu-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="media.html" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="menu-content">
+                <div class="menu-title">两微一端</div>
+            </div>
+            <div class="menu-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+
+        <a href="complaint.html" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-comment-alt"></i>
+            </div>
+            <div class="menu-content">
+                <div class="menu-title">投资投诉</div>
+            </div>
+            <div class="menu-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

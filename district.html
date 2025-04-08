@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区县详情</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <!-- 顶部导航 -->
+    <div class="flex items-center mb-6">
+        <button onclick="history.back()" class="mr-4">
+            <i class="fas fa-chevron-left text-lg"></i>
+        </button>
+        <h1 class="text-xl font-bold">青秀区</h1>
+    </div>
+
+    <!-- 区县内容 -->
+    <div class="space-y-4">
+        <!-- 区县简介 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="青秀区全景" class="w-full aspect-[2/1] object-cover">
+            <div class="p-4">
+                <h2 class="text-lg font-bold mb-2">区域概况</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    青秀区是南宁市中心城区，总面积873平方公里，常住人口120万人。区内聚集了众多金融机构、商贸企业和文化设施，是南宁市的政治、经济、文化中心。
+                </p>
+            </div>
+        </div>
+
+        <!-- 发展优势 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="p-4">
+                <h2 class="text-lg font-bold mb-4">发展优势</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold mb-1">区位优势</h3>
+                            <p class="text-gray-600">位于南宁市中心，交通便利，基础设施完善。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-industry text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold mb-1">产业基础</h3>
+                            <p class="text-gray-600">金融服务、商贸物流、文化创意等现代服务业发达。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-graduation-cap text-blue-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold mb-1">人才资源</h3>
+                            <p class="text-gray-600">聚集了多所高校和科研院所，人才资源丰富。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 重点产业 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+            <div class="p-4">
+                <h2 class="text-lg font-bold mb-4">重点产业</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 border rounded-lg">
+                        <i class="fas fa-landmark text-blue-500 mb-2"></i>
+                        <h3 class="font-semibold mb-1">金融服务</h3>
+                        <p class="text-sm text-gray-600">区域金融中心</p>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <i class="fas fa-shopping-bag text-blue-500 mb-2"></i>
+                        <h3 class="font-semibold mb-1">商贸物流</h3>
+                        <p class="text-sm text-gray-600">现代商贸集聚区</p>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <i class="fas fa-paint-brush text-blue-500 mb-2"></i>
+                        <h3 class="font-semibold mb-1">文化创意</h3>
+                        <p class="text-sm text-gray-600">文创产业示范区</p>
+                    </div>
+                    <div class="p-4 border rounded-lg">
+                        <i class="fas fa-hotel text-blue-500 mb-2"></i>
+                        <h3 class="font-semibold mb-1">商务服务</h3>
+                        <p class="text-sm text-gray-600">高端服务业基地</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
