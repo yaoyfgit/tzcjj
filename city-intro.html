@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            background-color: #fff;
+            background-color: #f5f5f5;
             color: #333;
+        }
+        .city-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .city-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .city-card img {
+            transition: transform 0.3s ease;
+        }
+        .city-card:hover img {
+            transform: scale(1.05);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -22,41 +48,47 @@
         <h1 class="text-xl font-bold">南宁简介</h1>
     </div>
 
-    <!-- 城市图片 -->
-    <div class="mb-6 rounded-xl overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="南宁城市风光" class="w-full aspect-[2/1] object-cover">
-    </div>
-
     <!-- 城市介绍 -->
-    <div class="space-y-4">
-        <div class="bg-white rounded-xl p-4 shadow-sm">
-            <h2 class="text-lg font-bold mb-2">城市概况</h2>
-            <p class="text-gray-600 leading-relaxed">
-                南宁市是广西壮族自治区的首府，中国面向东盟开放合作的前沿城市。作为"一带一路"有机衔接的重要门户，南宁在中国-东盟区域经济合作中发挥着重要作用。
-            </p>
+    <div class="space-y-6">
+        <div class="city-card">
+            <div class="relative overflow-hidden">
+                <img src="https://images.pexels.com/photos/2846001/pexels-photo-2846001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="南宁城市风貌" class="w-full aspect-[2/1] object-cover">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-lg font-bold mb-2">城市概况</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    南宁市是广西壮族自治区的首府，中国面向东盟开放合作的前沿城市。作为"一带一路"有机衔接的重要门户，南宁在中国-东盟区域经济合作中发挥着重要作用。
+                </p>
+            </div>
         </div>
 
-        <div class="bg-white rounded-xl p-4 shadow-sm">
-            <h2 class="text-lg font-bold mb-2">地理位置</h2>
-            <p class="text-gray-600 leading-relaxed">
-                南宁位于广西壮族自治区南部，介于东经107°45′～108°51′和北纬22°13′～23°32′之间。东临贵港市，南连钦州市，西接崇左市，北靠百色市。
-            </p>
+        <div class="city-card">
+            <div class="p-6">
+                <h2 class="text-lg font-bold mb-2">地理位置</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    南宁位于广西壮族自治区南部，介于东经107°45′～108°51′和北纬22°13′～23°32′之间。东临贵港市，南连钦州市，西接崇左市，北靠百色市。
+                </p>
+            </div>
         </div>
 
-        <div class="bg-white rounded-xl p-4 shadow-sm">
-            <h2 class="text-lg font-bold mb-2">经济实力</h2>
-            <p class="text-gray-600 leading-relaxed">
-                近年来，南宁市经济持续快速发展，2023年地区生产总值突破5000亿元。产业结构不断优化，现代服务业、先进制造业、特色农业协调发展，形成了多元化的经济格局。
-            </p>
+        <div class="city-card">
+            <div class="p-6">
+                <h2 class="text-lg font-bold mb-2">经济实力</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    近年来，南宁市经济持续快速发展，2023年地区生产总值突破5000亿元。产业结构不断优化，现代服务业、先进制造业、特色农业协调发展，形成了多元化的经济格局。
+                </p>
+            </div>
         </div>
 
-        <div class="bg-white rounded-xl p-4 shadow-sm">
-            <h2 class="text-lg font-bold mb-2">发展优势</h2>
-            <p class="text-gray-600 leading-relaxed">
-                南宁具有独特的区位优势、丰富的文化资源、良好的生态环境和完善的基础设施。作为中国-东盟博览会永久举办地，南宁已成为链接中国-东盟的重要纽带。
-            </p>
+        <div class="city-card">
+            <div class="p-6">
+                <h2 class="text-lg font-bold mb-2">发展优势</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    南宁具有独特的区位优势、丰富的文化资源、良好的生态环境和完善的基础设施。作为中国-东盟博览会永久举办地，南宁已成为链接中国-东盟的重要纽带。
+                </p>
+            </div>
         </div>
     </div>
 </body>
 </html>
-<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="南宁城市风光" class="w-full aspect-[2/1] object-cover">

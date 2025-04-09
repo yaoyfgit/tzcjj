@@ -11,11 +11,31 @@
             background-color: #f5f5f5;
             color: #333;
         }
-        .news-card {
+        .policy-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .policy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .policy-card img {
+            transition: transform 0.3s ease;
+        }
+        .policy-card:hover img {
+            transform: scale(1.05);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -28,41 +48,62 @@
         <h1 class="text-xl font-bold">政策解读</h1>
     </div>
 
-    <!-- 新闻列表 -->
-    <div class="space-y-4">
-        <div class="news-card">
-            <div class="aspect-[2/1] bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="政策新闻图片" class="w-full h-full object-cover">
+    <!-- 政策列表 -->
+    <div class="space-y-6">
+        <div class="policy-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800" alt="产业政策" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
             </div>
-            <div class="p-4">
-                <h3 class="text-lg font-bold mb-2">南宁市发布新一轮科技创新扶持政策</h3>
-                <p class="text-gray-600 text-sm mb-3">南宁市政府近日出台《关于促进科技创新的若干政策措施》，从研发投入、人才引进、平台建设等多个方面加大扶持力度...</p>
-                <div class="flex justify-between items-center text-sm text-gray-500">
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-blue-600 transition-colors">南宁市产业发展扶持政策</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">为促进产业高质量发展，南宁市出台多项扶持政策，包括资金补贴、税收优惠等多方面支持措施。</p>
+                <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
+                    <span>发布时间：2024-01-20</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="创新政策" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-green-600 transition-colors">科技创新支持政策</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">支持企业开展技术创新，对获得发明专利的企业给予奖励，支持企业建设研发中心和创新平台。</p>
+                <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
                     <span>发布时间：2024-01-15</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </div>
 
-        <div class="news-card">
-            <div class="p-4">
-                <h3 class="text-lg font-bold mb-2">解读：南宁市产业转型升级扶持政策要点</h3>
-                <p class="text-gray-600 text-sm mb-3">针对传统制造业转型升级，南宁市推出系列扶持政策，包括设备更新补贴、技术改造资金支持、智能化改造奖励等多项措施...</p>
-                <div class="flex justify-between items-center text-sm text-gray-500">
+        <div class="policy-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800" alt="人才政策" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-purple-600 transition-colors">人才引进政策</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">为吸引高层次人才，提供住房补贴、子女就学、配偶就业等一系列优惠政策，打造良好的人才发展环境。</p>
+                <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
                     <span>发布时间：2024-01-10</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </div>
 
-        <div class="news-card">
-            <div class="aspect-[2/1] bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="政策新闻图片" class="w-full h-full object-cover">
+        <div class="policy-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800" alt="金融政策" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
             </div>
-            <div class="p-4">
-                <h3 class="text-lg font-bold mb-2">南宁出台跨境电商发展新政</h3>
-                <p class="text-gray-600 text-sm mb-3">为加快建设中国-东盟跨境电子商务中心，南宁市发布跨境电商发展扶持政策，在物流、通关、金融等方面提供全方位支持...</p>
-                <div class="flex justify-between items-center text-sm text-gray-500">
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-red-600 transition-colors">金融支持政策</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">设立产业发展基金，支持企业上市融资，提供贷款贴息等多种金融支持措施，助力企业发展。</p>
+                <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
                     <span>发布时间：2024-01-05</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>

@@ -13,9 +13,29 @@
         }
         .industry-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .industry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .industry-card img {
+            transition: transform 0.3s ease;
+        }
+        .industry-card:hover img {
+            transform: scale(1.05);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -31,8 +51,9 @@
     <!-- 产业列表 -->
     <div class="space-y-4">
         <div class="industry-card">
-            <div class="aspect-[2/1] bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="电子信息产业" class="w-full h-full object-cover">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800" alt="电子信息产业" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
             </div>
             <div class="p-4">
                 <h3 class="text-lg font-bold mb-2">电子信息产业</h3>
@@ -56,8 +77,9 @@
         </div>
 
         <div class="industry-card">
-            <div class="aspect-[2/1] bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800" alt="新能源汽车产业" class="w-full h-full object-cover">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800" alt="新能源汽车产业" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
             </div>
             <div class="p-4">
                 <h3 class="text-lg font-bold mb-2">新能源汽车产业</h3>

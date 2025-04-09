@@ -11,6 +11,32 @@
             background-color: #f5f5f5;
             color: #333;
         }
+        .park-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .park-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .park-card img {
+            transition: transform 0.3s ease;
+        }
+        .park-card:hover img {
+            transform: scale(1.05);
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="p-4">
@@ -19,45 +45,41 @@
         <button onclick="history.back()" class="mr-4">
             <i class="fas fa-chevron-left text-lg"></i>
         </button>
-        <h1 class="text-xl font-bold">南宁高新技术产业开发区</h1>
+        <h1 class="text-xl font-bold">园区详情</h1>
     </div>
 
-    <!-- 内容区域 -->
-    <div class="space-y-4">
-        <!-- 园区简介 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="园区鸟瞰图" class="w-full aspect-[2/1] object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-bold mb-2">园区简介</h2>
-                <p class="text-gray-600 leading-relaxed">
-                    南宁高新技术产业开发区是国家级高新区，总规划面积约131平方公里。园区以电子信息、生物医药、新材料等战略性新兴产业为主导，是广西创新驱动发展示范区和高新技术产业集聚区。
-                </p>
+    <!-- 园区列表 -->
+    <div class="space-y-6">
+        <div class="park-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800" alt="高新技术产业园" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-blue-600 transition-colors">南宁高新技术产业开发区</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">国家级高新技术产业开发区，重点发展电子信息、生物医药、新材料等产业。</p>
             </div>
         </div>
 
-        <!-- 投资环境 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="投资环境" class="w-full aspect-[2/1] object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-bold mb-2">投资环境</h2>
-                <div class="space-y-3 text-gray-600">
-                    <p>区位优势：地处南宁市城北核心区，紧邻南宁国际机场，交通便利。</p>
-                    <p>政策支持：享受国家级高新区各项优惠政策，在人才引进、科技创新、产业发展等方面提供全方位支持。</p>
-                    <p>配套设施：建有科技企业孵化器、加速器，以及公共技术服务平台，为企业发展提供完善的服务体系。</p>
-                </div>
+        <div class="park-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="经济技术开发区" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-green-600 transition-colors">南宁经济技术开发区</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">国家级经济技术开发区，以先进制造业为主导，打造现代化工业新城。</p>
             </div>
         </div>
 
-        <!-- 产业配套 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="产业配套" class="w-full aspect-[2/1] object-cover">
-            <div class="p-4">
-                <h2 class="text-lg font-bold mb-2">产业配套</h2>
-                <div class="space-y-3 text-gray-600">
-                    <p>产业集群：已形成电子信息、生物医药、新材料三大主导产业集群，聚集了一批行业领军企业。</p>
-                    <p>创新平台：建有国家级重点实验室、工程技术研究中心等创新平台，为企业技术创新提供支撑。</p>
-                    <p>人才服务：设有人才服务中心，提供人才引进、培训、住房等一站式服务。</p>
-                </div>
+        <div class="park-card">
+            <div class="aspect-[2/1] bg-gray-100 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800" alt="中关村电子信息产业园" class="w-full h-full object-cover">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="p-6">
+                <h2 class="text-xl font-bold mb-3 hover:text-purple-600 transition-colors">中关村电子信息产业园</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">打造电子信息产业集群，推动产业转型升级，构建创新发展新格局。</p>
             </div>
         </div>
     </div>
